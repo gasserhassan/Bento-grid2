@@ -1,0 +1,254 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(0deg 0% 89.9%);
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.contener{
+    width: 70%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    gap: 20px;
+    
+    grid-template-areas: 
+        "box1 box2 box2 box3"
+        "box1 box2 box2 box3"
+        "box1 box4 box5 box3"
+        "box6 box4 box5 box3"
+        "box6 box7 box8 box8"
+        "box6 box7 box8 box8";
+}
+
+.box{
+    background-color: brown;
+    width: auto;
+    height: auto;
+    border-radius: 15px;
+}
+
+.box1{
+    grid-area: box1;
+    background-color:  hsl(31, 66%, 93%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+.box1 p{
+    width: 73%;
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.box1 img{
+    width: 70%;
+}
+
+.box2{
+    grid-area: box2;
+    background-color: hsl(256, 67%, 59%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   justify-content: center;
+}
+
+.box2 p:first-child{
+    font-size: 51px;
+    font-weight: bold;
+    width: 74%;
+    color: hsl(0, 0%, 100%);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.box2 img{
+    width: 40%;
+}
+
+.box2 p:last-child{
+    color: hsl(0, 0%, 100%);
+    font-weight: lighter;
+    font-size: 21px;
+}
+
+.box3{
+    grid-area: box3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background-color: hsl(254, 88%, 90%);
+    overflow: hidden;
+}
+
+.box3 p:first-child{
+    font-size: 30px;
+    font-weight: bold;
+    width: 70%;
+    text-align: left;
+    color: hsl(0, 0%, 7%);
+}
+
+.box3 img{
+    width: 122%;
+    margin-left: 104%;
+}
+
+.box3 p:last-child{
+    width: 63%;
+    font-size: 18px;
+    text-align: left;
+}
+
+.box4{
+    grid-area: box4;
+    background-color:hsl(0, 0%, 100%) ;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.box4 img{
+    width: 128%;
+    margin-left: 37%;
+}
+
+.box4 p{
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    width: 84%;
+    margin-top: 30px;
+}
+
+.box5{
+    grid-area: box5;
+    background-color: hsl(39, 100%, 71%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    
+}
+
+.box5 p{
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    width: 84%;
+    margin-top: 30px;
+}
+
+.box5 img{
+    width: 87%;
+    margin-bottom: -34%;
+}
+
+
+.box6{
+    grid-area: box6;
+    background-color: hsl(39, 100%, 71%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.box6 p{
+    width: 73%;
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.box6 img{
+    width: 80%;
+}
+
+.box7{
+    grid-area: box7;
+    background-color: hsl(0, 0%, 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.box7 p:first-child{
+    font-size: 326%;
+    font-weight: bold;
+}
+
+.box7 img{
+    width: 75%;
+    margin-top: 19%;
+}
+
+.box8{
+    grid-area: box8;
+    background-color: hsl(256, 67%, 59%);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.box8 img{
+    width: 44%;
+}
+
+.box8 p{
+    width: 50%;
+    font-size: 39px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: hsl(0, 0%, 100%);
+}
+
+@media (max-width: 768px) {
+    .contener {
+        width: 89%;
+        height: auto; /* Allow content to expand as needed */
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Change to 2 columns */
+        grid-template-rows: auto; /* Adjust rows dynamically */
+        gap: 30px; /* Reduce gap for better spacing */
+
+        grid-template-areas: 
+            "box2 box2"
+            "box4 box4"
+            "box5 box5"
+            "box3 box3"
+            "box8 box8"
+            "box7 box7"
+            "box1 box1"
+            "box6 box6"
+            ;
+            
+    }
+}
